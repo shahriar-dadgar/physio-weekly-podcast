@@ -233,6 +233,19 @@ def make_cover(path):
     img.save(path, "JPEG", quality=90)
 
 
+def use_custom_cover(src, dest):
+    """Turns your own artwork (docs/cover.png) into a 1400x1400 cover.jpg."""
+    from PIL import Image
+
+    img = Image.open(src).convert("RGB")
+    side = min(img.size)
+    left = (img.width - side) // 2
+    top = (img.height - side) // 2
+    img = img.crop((left, top, left + side, top + side))
+    img = img.resize((1400, 1400), Image.LANCZOS)
+    img.save(dest, "JPEG", quality=88, optimize=True, progressive=True)
+
+
 # ------------------------------------------------------------
 # 5. FEED + INDEX PAGE
 # ------------------------------------------------------------
@@ -445,7 +458,10 @@ def main():
     DOCS.mkdir(exist_ok=True)
     (DOCS / ".nojekyll").touch()
 
-    if not (DOCS / "cover.jpg").exists():
+    # Your own artwork in docs/cover.png wins; otherwise draw a default once.
+    if (DOCS / "cover.png").exists():
+        use_custom_cover(DOCS / "cover.png", DOCS / "cover.jpg")
+    elif not (DOCS / "cover.jpg").exists():
         make_cover(DOCS / "cover.jpg")
 
     date_text, script = fetch_script()
