@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Physio Weekly for Sabaa</title>
+    <link>https://shahriar-dadgar.github.io/physio-weekly-podcast/</link>
+    <description>A short weekly briefing on the latest physiotherapy and rehabilitation research and technology.</description>
+    <language>en</language>
+    <itunes:author>Physio Weekly for Sabaa</itunes:author>
+    <itunes:category text="Health &amp; Fitness"><itunes:category text="Medicine"/></itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://shahriar-dadgar.github.io/physio-weekly-podcast/cover.jpg"/>
+    <image><url>https://shahriar-dadgar.github.io/physio-weekly-podcast/cover.jpg</url><title>Physio Weekly for Sabaa</title><link>https://shahriar-dadgar.github.io/physio-weekly-podcast/</link></image>
+    <item>
+      <title>Physio Weekly for Sabaa: November 1, 2026</title>
+      <description>Welcome to this week's research roundup for Sabaa. We have a substantial batch of new evidence to cover, spanning pharmacology, neurorehabilitation, orthopedics, and digital health. Let's start with the scientific literature. A new Cochrane systematic review has tackled a long-standing question in stroke rehabilitation: whether levodopa or dopamine agonists can enhance motor recovery when combined</description>
+      <pubDate>Sun, 01 Nov 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="false">physio-weekly-2026-11-01</guid>
+      <enclosure url="https://shahriar-dadgar.github.io/physio-weekly-podcast/episodes/2026-11-01.mp3" length="3275568" type="audio/mpeg"/>
+      <itunes:duration>545</itunes:duration>
+    </item>
+  </channel>
+</rss>
