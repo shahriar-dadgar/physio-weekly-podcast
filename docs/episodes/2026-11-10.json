@@ -4,5 +4,67 @@
  "description": "Welcome to Physio Weekly for Sabaa, your briefing on the evidence and innovations shaping rehabilitation practice. I’m your host, and this week we have a substantial lineup of new research, followed by a look at technology adoption and emerging devices. Let’s start with the science, where a major new synthesis offers the clearest picture yet on designing digital programs for low back pain. A compo",
  "summary": "Welcome to Physio Weekly for Sabaa, your briefing on the evidence and innovations shaping rehabilitation practice. I’m your host, and this week we have a substantial lineup of new research, followed by a look at technology adoption and emerging devices. Let’s start with the science, where a major new synthesis offers the clearest picture yet on designing digital programs for low back pain. A component network meta-analysis published in NPJ Digital Medicine pooled forty-six randomized trials involving nearly sixty-seven hundred participants.",
  "duration": 535,
- "bytes": 3210768
+ "bytes": 3210768,
+ "stories": {
+  "scientific": [
+   {
+    "title": "Digital and hybrid interventions for subacute and chronic low back pain: component network meta-analysis",
+    "source": "NPJ Digital Medicine",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42982894/"
+   },
+   {
+    "title": "Chest physiotherapy for pneumonia in children",
+    "source": "The Cochrane Database of Systematic Reviews",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42992515/"
+   },
+   {
+    "title": "A Systematic Review and Meta-Analysis of Tongue Pressure Resistance Feedback Training on Patients With Dysphagia",
+    "source": "Journal of the American Medical Directors Association",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42987453/"
+   },
+   {
+    "title": "Effects of capacitive-resistive electric transfer therapy integrated with active rehabilitation on pain, sensorimotor function, and functional performance in subacute lateral ankle sprain: A randomized controlled trial",
+    "source": "Journal of Back and Musculoskeletal Rehabilitation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42995721/"
+   },
+   {
+    "title": "Effect of percutaneous electrolysis combined with exercise on pain and function in chronic lateral epicondylitis: A randomized controlled trial",
+    "source": "Musculoskeletal Science & Practice",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42987491/"
+   },
+   {
+    "title": "Comparison of robot-assisted gait training and visual feedback balance training on balance and gait outcomes in patients with stroke: a randomized controlled trial",
+    "source": "Physiotherapy Theory and Practice",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43001794/"
+   },
+   {
+    "title": "Benefits and limitations of robotic gait exoskeletons in functional rehabilitation of children with cerebral palsy: an umbrella review",
+    "source": "Disability and Rehabilitation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42986299/"
+   },
+   {
+    "title": "Effects of Traditional Chinese Exercise on Anxiety, Depression, Drug Craving, and Quality of Life in Individuals with Substance Use Disorders: A Meta-Analysis of Randomized Controlled Trials",
+    "source": "Substance Use & Misuse",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42981363/"
+   }
+  ],
+  "technology": [
+   {
+    "title": "Telerehabilitation: RTM, Orthopedic & PT Guide",
+    "source": "CASRAI",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBuUjlONTJUbExQYUw1X2JvdWh4OHhGeEE1WUgwU0RjeTczWHFzcFUxUklxY2pxQ0NDVEM5Xy1xU05oMVBNWm44ZGpxejVfaU9ZQkNnQ3lMWQ?oc=5"
+   },
+   {
+    "title": "Physitrack Selected by the Largest Private Physiotherapy Chain in the Netherlands",
+    "source": "WBOC TV",
+    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQakd5NVdGS1NONUREcGhrckNLdGV6VWo5VXN5Y196bkhTb0FNbkZqVTFvTDY2bm5hMGpDRk9uUWxEdkRNblU5N0VVNU1iTGFrNDhZcTNlSTFVaWczdW5kY2Q3clBoY2FmY0dGYnNPN0I2RTVTMndDOThneTZycXd0SlVORDd6dGszMkVGZ1AtZGl3U1AyaDhiS2t6aXF3aEdETGZnNGlwUE1VUWpzTndKQzR6NVo3YXdxVE40azM4R3pFWXVFM21aaF9kZmdTLXV1ZmdESXdhMGN4dVA3MFVQelowTmpfVUFzTXBxeUdBb3BURGhBbU8zdmxhck02VW91WDBiMENXaF9keWZvWDBOcw?oc=5"
+   },
+   {
+    "title": "Dynamic Solution’s VR Hand Rehabilitation Robot, Dynamic X-Hand, Selected for Three CES 2027 Innovation Awards",
+    "source": "USA Today",
+    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNUVFmQl9GOUxiTUQtaXVkM2JOWGRFcWVQbWs2LVUycVVDejZ0ZjBudkN5WHRDNlJucTZfWXJDS2FONUNNenYwX0pYbVYweXRBUEhoLVNJZ0Y1UWJjYUJQbGNrNmItR2kzZzlnLUo4SmpkaFlfQWNnWGRNbU1ROVROa3I1V3RCQ0l6SXd0dU1kTVpCdUx5MmE3SmFQNld1TUYyVmE1ZWxaSW81cVNGWlRfQkN5ZGFqODZUbDhLeUFhNkFYUFAzV0k5Q1l2NTBKUnR1MGM0YTlCa05CNnFUT0VMSVFnOC1oTHBxeDRydmxMMzQ?oc=5"
+   }
+  ]
+ },
+ "transcript": true
 }

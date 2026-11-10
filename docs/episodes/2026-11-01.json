@@ -3,5 +3,67 @@
  "title": "Physio Weekly for Sabaa: November 1, 2026",
  "description": "Welcome to this week's research roundup for Sabaa. We have a substantial batch of new evidence to cover, spanning pharmacology, neurorehabilitation, orthopedics, and digital health. Let's start with the scientific literature. A new Cochrane systematic review has tackled a long-standing question in stroke rehabilitation: whether levodopa or dopamine agonists can enhance motor recovery when combined",
  "duration": 545,
- "bytes": 3275568
+ "bytes": 3275568,
+ "stories": {
+  "scientific": [
+   {
+    "title": "Levodopa or dopamine agonists for enhancing motor function after stroke",
+    "source": "The Cochrane database of systematic reviews",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42954433/"
+   },
+   {
+    "title": "Italian guidelines for speech and language therapy in patients with stroke or primary progressive aphasia. Recommendations from the Italian neuropsychological society",
+    "source": "Neuropsychological rehabilitation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42954422/"
+   },
+   {
+    "title": "Comparative Effectiveness of Digital Exercise-Based Interventions for Improving Balance in Older Adults: Systematic Review and Network Meta-Analysis With GRADE Certainty of Evidence",
+    "source": "JMIR aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42954170/"
+   },
+   {
+    "title": "Acupuncture for postoperative pain management and functional recovery after total knee arthroplasty in older adults: a systematic review and meta-analysis",
+    "source": "Geriatric nursing (New York, N.Y.)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42956696/"
+   },
+   {
+    "title": "Comparative Effects of Motor-Control Interventions on Neuromuscular and Biomechanical Outcomes After Anterior Cruciate Ligament Reconstruction: A Systematic Review and Network Meta-analysis",
+    "source": "Complementary therapies in medicine",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42946095/"
+   },
+   {
+    "title": "Clinical Pathway Management for Platelet-Rich Plasma Therapy in Kellgren-Lawrence Grade I and II Knee Osteoarthritis: A Prospective, Multicenter, Double-Blind Randomized Controlled Trial",
+    "source": "The American journal of sports medicine",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42929654/"
+   },
+   {
+    "title": "Comparative effectiveness of three splints for rehabilitation after finger flexor tendon repair (FIRST): randomised controlled trial",
+    "source": "BMJ (Clinical research ed.)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42946338/"
+   },
+   {
+    "title": "Effectiveness of Wrist-Worn Wearable-Guided Cardiac Rehabilitation Delivered Through Fully Remote or Hybrid Programs in Patients With Cardiovascular Disease: Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+    "source": "JMIR mHealth and uHealth",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42945529/"
+   }
+  ],
+  "technology": [
+   {
+    "title": "Telerehabilitation Shows Comparable Outcomes in Multiple Sclerosis",
+    "source": "EMJ",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLWgtSF9tUkRLdFRJR1R1dG44VnBLRUl5aVQxZU5CODk1WklyM0ppemYtajduNEdKNVpiRV9KTDVTYXVreHBXdUxJTjdUeG9vZTdBd2Z2SzNkUjhYVXRhZWpieTNfWEhUYmZhb1VUUHMzcU0zUDRuOEJLc1NkQ0pjdDlkMVVfWHJzUlR3MVEzbjlSWDF6S0ZSMDFMazZJTHdfQmlKQ2k4eFNQNVYtMnc?oc=5"
+   },
+   {
+    "title": "China Advances Ultrasound Neuromodulation to Reawaken Brain-Injury Patients",
+    "source": "South China Morning Post",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQVS1fd0hKNy1hZS1hdnlSenFNTHY4NXFhbEw4YTZjeVo1ZHktWUVjR0RHSURKSWtIdWtqc2o4dlRwTGtVQkp2YWhuY3lONVp5bGtPbUdBTTFoTUVwZVJKWHpnLVBla3BVQ2dYTmJtbmFrRE5nc3NuZk94R2M1RzAxUXQtaU5GX0dITE42R09yVDJqbGVBZmZMcUczQm9uV19LeklJdjlBY0ZuTjM2RlhvYW5JOV9kRTZHSVJpdEdOTEw3ejV1emY2bWFra2p2RzhP0gHQAUFVX3lxTFBVLV93SEo3LWFlLWF2eVJ6cU1Mdjg1cWFsTDhhNmN5WjVkeS1ZRWNHREdJREpJa0h1a2pzajh2VHBMa1VCSnZhaG5jeU41Wnlsa09tR0FNMWhNRXBlUkpYemctUGVrcFVDZ1hOYm1uYWtETmdzc25mT3hHYzVHMDFRdC1pTkZfR0hMTjZHT3JUMmpsZUFmZkxxRzNCb25XX0t6SUl2OUFjRm5OMzZGWG9hbkk5X2RFNkdJUml0R05MTDd6NXV6ZjZtYWtranZHOE8?oc=5"
+   },
+   {
+    "title": "Printable Hydrogel Enables Multitasking Wearable Health Sensors",
+    "source": "Medical Product Outsourcing",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRU4xdDlxRVhpUkxHUDBmVC1QX3NOVHpLMVNlbzEzd3FjMFc2cUhYdk90U1d3OGFMNllWcWFlek1KMGNVWkpnYmZpUjhXclZHSUh2eGNWbnhxd0ZSa3ozREF1anhlQzZwUVdIM1dON1FpZzQwR2dqUUs1ODN4UkJfcnlRRmpKNjVYR2NiME4ydUIxWXZPWjZUMTFIbTBxRmU3YzVlQXl3?oc=5"
+   }
+  ]
+ },
+ "transcript": true
 }
