@@ -51,12 +51,20 @@ FORCE = os.environ.get("FORCE", "").strip() in ("1", "true", "yes")
 # 1. FETCH THE SCRIPT
 # ------------------------------------------------------------
 
-def fetch_script():
+def fetch_episode(date_text=None):
+    """Latest episode (or the one for date_text) from the Apps Script web app.
+
+    Returns the JSON dict: date, script, stories. For a specific date,
+    returns None instead of stopping when it can't be fetched.
+    """
     base = os.environ["APPS_SCRIPT_URL"].strip()
     token = os.environ["PODCAST_TOKEN"].strip()
 
-    query = urllib.parse.urlencode({"action": "podcast", "token": token})
-    url = base + ("&" if "?" in base else "?") + query
+    params = {"action": "podcast", "token": token}
+    if date_text:
+        params["date"] = date_text
+
+    url = base + ("&" if "?" in base else "?") + urllib.parse.urlencode(params)
 
     last_error = "unknown error"
 
@@ -66,11 +74,13 @@ def fetch_script():
                 data = json.loads(response.read().decode("utf-8"))
 
             if data.get("ok") and data.get("script"):
-                return data["date"], data["script"]
+                return data
 
             last_error = data.get("error", "unexpected response")
 
             if last_error == "No podcast script yet":
+                if date_text:
+                    return None
                 print("No podcast script in the sheet yet. Nothing to do.")
                 sys.exit(0)
 
@@ -79,6 +89,10 @@ def fetch_script():
 
         print("Fetch attempt %d failed: %s" % (attempt, last_error), file=sys.stderr)
         time.sleep(30 * attempt)
+
+    if date_text:
+        print("Could not fetch %s: %s" % (date_text, last_error), file=sys.stderr)
+        return None
 
     sys.exit("Could not fetch the podcast script: " + last_error)
 
@@ -167,7 +181,7 @@ def prune():
     dates = sorted((p.stem for p in EPISODES.glob("*.json")), reverse=True)
 
     for old in dates[KEEP_EPISODES:]:
-        for ext in (".json", ".mp3"):
+        for ext in (".json", ".mp3", ".html"):
             (EPISODES / (old + ext)).unlink(missing_ok=True)
 
 
@@ -346,6 +360,96 @@ def pretty_date(date_text):
     return "%s %d %s %d" % (day.strftime("%A,"), day.day, day.strftime("%B"), day.year)
 
 
+def attr(text):
+    return escape(str(text or ""), {'"': "&quot;"})
+
+
+def clean_stories(stories):
+    out = {"scientific": [], "technology": []}
+
+    for kind in out:
+        for story in (stories or {}).get(kind) or []:
+            title = " ".join(str(story.get("title") or "").split())
+            if title:
+                out[kind].append({
+                    "title": title,
+                    "source": " ".join(str(story.get("source") or "").split()),
+                    "url": str(story.get("url") or "").strip(),
+                })
+
+    return out
+
+
+def transcript_paragraphs(script):
+    text = str(script or "").replace("\r", "")
+    parts = [p for p in re.split(r"\n\s*\n", text) if p.strip()]
+
+    if len(parts) <= 1:
+        parts = [p for p in text.split("\n") if p.strip()]
+
+    return ["<p>%s</p>" % escape(" ".join(p.split())) for p in parts]
+
+
+def write_extras(date_text, data):
+    """Saves the story titles and a full transcript page for one episode."""
+    meta_path = EPISODES / (date_text + ".json")
+
+    if not meta_path.exists():
+        return
+
+    meta = json.loads(meta_path.read_text(encoding="utf-8"))
+
+    stories = clean_stories(data.get("stories"))
+    if stories["scientific"] or stories["technology"]:
+        meta["stories"] = stories
+
+    script = clean_for_speech(data.get("script") or "")
+
+    if script:
+        page = (
+            "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\">"
+            "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+            "<link rel=\"icon\" href=\"../cover.jpg\">"
+            "<title>Transcript: %s</title><style>%s</style></head><body><div class=\"wrap\">"
+            "<p><a class=\"back\" href=\"../\">&larr; All episodes</a></p>"
+            "<span class=\"label\">Transcript</span>"
+            "<h1>%s</h1><p class=\"meta\">%s &middot; %s</p>"
+            "<audio controls preload=\"metadata\" src=\"%s.mp3\"></audio>"
+            "<article class=\"transcript\">%s</article>"
+            "<p><a class=\"back\" href=\"../\">&larr; All episodes</a></p>"
+            "</div></body></html>"
+        ) % (
+            escape(meta["title"]), PAGE_STYLE, escape(meta["title"]),
+            pretty_date(date_text), pretty_minutes(meta.get("duration")),
+            date_text, "".join(transcript_paragraphs(script)),
+        )
+
+        (EPISODES / (date_text + ".html")).write_text(page, encoding="utf-8")
+        meta["transcript"] = True
+
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def stories_html(meta):
+    stories = meta.get("stories") or {}
+    blocks = []
+
+    for kind, heading in (("scientific", "Research"), ("technology", "Technology")):
+        items = []
+
+        for story in stories.get(kind) or []:
+            title = escape(story["title"])
+            if story.get("url"):
+                title = '<a href="%s" target="_blank" rel="noopener">%s</a>' % (attr(story["url"]), title)
+            source = ('<span class="src">%s</span>' % escape(story["source"])) if story.get("source") else ""
+            items.append("<li>%s%s</li>" % (title, source))
+
+        if items:
+            blocks.append("<h4>%s</h4><ol>%s</ol>" % (heading, "".join(items)))
+
+    return '<div class="stories">%s</div>' % "".join(blocks) if blocks else ""
+
+
 PAGE_STYLE = """
 :root{--bg:#f4f8f7;--card:#ffffff;--ink:#12302f;--muted:#55706d;--line:#d9e6e3;
 --brand:#0e3d42;--accent:#2f9e8a;--accent-soft:#e2f4f0}
@@ -381,6 +485,17 @@ li audio{margin:.5rem 0 0;height:36px}
 .empty{color:var(--muted)}
 footer{margin-top:2.5rem;color:var(--muted);font-size:.85rem;word-break:break-all}
 code{background:var(--accent-soft);padding:.1rem .35rem;border-radius:6px}
+a{color:var(--accent)}
+.stories h4{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:1rem 0 .4rem}
+.stories h4:first-child{margin-top:0}
+.stories ol{margin:0;padding-left:1.3rem}
+.stories li{border:0;padding:.2rem 0}
+.stories li a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.stories li a:hover{border-color:var(--accent)}
+.src{display:block;color:var(--muted);font-size:.8rem}
+.back{text-decoration:none;font-size:.9rem}
+.transcript p{margin:0 0 1rem}
+li .links{display:block;margin-top:.35rem;font-size:.85rem}
 """
 
 
@@ -390,7 +505,13 @@ def build_index(base):
 
     if episodes:
         latest = episodes[0]
-        summary = sentence_trim(latest.get("summary") or latest["description"], 700)
+        body = stories_html(latest) or '<p class="summary">%s</p>' % escape(
+            sentence_trim(latest.get("summary") or latest["description"], 700))
+
+        transcript_btn = (
+            '<a class="btn primary" href="episodes/%s.html">Read full transcript</a>' % latest["date"]
+            if (EPISODES / (latest["date"] + ".html")).exists() else ""
+        )
 
         latest_html = (
             '<section class="latest">'
@@ -398,9 +519,9 @@ def build_index(base):
             "<h2>%s</h2>"
             '<p class="meta">%s &middot; %s</p>'
             '<audio controls preload="metadata" src="episodes/%s.mp3"></audio>'
-            '<p class="summary">%s</p>'
-            '<div class="actions">'
-            '<a class="btn primary" href="episodes/%s.mp3" download>Download MP3</a>'
+            "%s"
+            '<div class="actions">%s'
+            '<a class="btn" href="episodes/%s.mp3" download>Download MP3</a>'
             '<button class="btn" type="button" id="copy">Copy podcast feed link</button>'
             "</div></section>"
         ) % (
@@ -408,19 +529,26 @@ def build_index(base):
             pretty_date(latest["date"]),
             pretty_minutes(latest.get("duration")),
             latest["date"],
-            escape(summary),
+            body,
+            transcript_btn,
             latest["date"],
         )
     else:
         latest_html = '<p class="empty">The first episode is on its way.</p>'
 
-    older = "".join(
-        "<li><strong>%s</strong><span>%s &middot; %s</span>"
-        '<audio controls preload="none" src="episodes/%s.mp3"></audio></li>'
-        % (escape(m["title"]), pretty_date(m["date"]),
-           pretty_minutes(m.get("duration")), m["date"])
-        for m in episodes[1:]
-    )
+    def older_item(m):
+        link = (
+            '<span class="links"><a href="episodes/%s.html">Read transcript</a></span>' % m["date"]
+            if (EPISODES / (m["date"] + ".html")).exists() else ""
+        )
+        return (
+            "<li><strong>%s</strong><span>%s &middot; %s</span>"
+            '<audio controls preload="none" src="episodes/%s.mp3"></audio>%s</li>'
+            % (escape(m["title"]), pretty_date(m["date"]),
+               pretty_minutes(m.get("duration")), m["date"], link)
+        )
+
+    older = "".join(older_item(m) for m in episodes[1:])
 
     older_html = ("<h3>Previous episodes</h3><ul>%s</ul>" % older) if older else ""
 
@@ -464,14 +592,27 @@ def main():
     elif not (DOCS / "cover.jpg").exists():
         make_cover(DOCS / "cover.jpg")
 
-    date_text, script = fetch_script()
+    data = fetch_episode()
+    date_text = data["date"]
 
     if (EPISODES / (date_text + ".json")).exists() and not FORCE:
         print("Episode %s is already published." % date_text)
     else:
-        save_episode(date_text, clean_for_speech(script))
+        save_episode(date_text, clean_for_speech(data["script"]))
         prune()
         print("Episode %s ready." % date_text)
+
+    write_extras(date_text, data)
+
+    # Older episodes published before titles and transcripts existed.
+    for meta in load_episodes():
+        if meta["date"] == date_text:
+            continue
+        if meta.get("stories") and (EPISODES / (meta["date"] + ".html")).exists():
+            continue
+        older = fetch_episode(meta["date"])
+        if older:
+            write_extras(meta["date"], older)
 
     # Always rebuild the feed and page (nothing is committed if unchanged).
     base = base_url()
