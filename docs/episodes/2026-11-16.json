@@ -1,0 +1,70 @@
+{
+ "date": "2026-11-16",
+ "title": "Physio Weekly for Sabaa: November 16, 2026",
+ "description": "Welcome to Physio Weekly for Sabaa, your weekly briefing on the research and innovation shaping rehabilitation practice. I'm your host, and today we're looking at new evidence across post-operative recovery, musculoskeletal care, and neurological rehabilitation. We'll also explore some interesting developments in wearable sensors and rehabilitation robotics. We begin with the scientific literature",
+ "summary": "Welcome to Physio Weekly for Sabaa, your weekly briefing on the research and innovation shaping rehabilitation practice. I'm your host, and today we're looking at new evidence across post-operative recovery, musculoskeletal care, and neurological rehabilitation. We'll also explore some interesting developments in wearable sensors and rehabilitation robotics. We begin with the scientific literature, and a topic many of you will encounter daily: rehabilitation after total knee arthroplasty.",
+ "duration": 484,
+ "bytes": 2908368,
+ "stories": {
+  "scientific": [
+   {
+    "title": "Effectiveness of Digital Health Interventions on Rehabilitation Outcomes in Patients After Total Knee Arthroplasty: Systematic Review and Network Meta-Analysis",
+    "source": "Journal of Medical Internet Research",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43024366/"
+   },
+   {
+    "title": "The role of scapular muscles strengthening in lateral epicondylalgia rehabilitation: A systematic review with meta-analysis",
+    "source": "Journal of Hand Therapy",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43015197/"
+   },
+   {
+    "title": "Interval Between Injury and Surgery Influences Knee Biomechanics During Walking in Anterior Cruciate Ligament Reconstructed Patients: A Systematic Review with Meta-analysis",
+    "source": "Sports Medicine",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43009638/"
+   },
+   {
+    "title": "XR serious games for phantom limb pain, neurofunctional recovery, and prosthetic adoption: a systematic review",
+    "source": "Journal of Rehabilitation Medicine",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43010871/"
+   },
+   {
+    "title": "Effects of transcutaneous electrical nerve stimulation on spasticity in individuals with spinal cord injury: A systematic review and meta-analysis",
+    "source": "The Journal of Spinal Cord Medicine",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43013814/"
+   },
+   {
+    "title": "Effectiveness of a Tailored Community-Based Exercise Program for Improving Chinese Community-Dwelling Older Adults' Physical Fitness: A Randomized Controlled Trial",
+    "source": "Journal of Aging and Physical Activity",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43014298/"
+   },
+   {
+    "title": "Cerebellar Intermittent Theta-burst Stimulation Reduces Dual Task Cost in Walking and Balance in Stroke Patients",
+    "source": "Cerebellum",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43018826/"
+   },
+   {
+    "title": "Ultrasound-guided intra-articular steroid injection versus combined suprascapular and axillary nerve block in adhesive capsulitis: a randomized controlled trial",
+    "source": "Journal of Ultrasound",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43033358/"
+   }
+  ],
+  "technology": [
+   {
+    "title": "Wearable Inertial Sensors Detect Knee Motion Linked to Landing Error Scores",
+    "source": "Bioengineer.org",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTTQwSXhXNVVGeVYzWUNkbjdoS2ZQdkFDSHo2OUdZWXdvdVl0ME9CdHNwSmxrSk8wd25xTlRoNS1pSXlGS1BDTjJLTzZPSVllU0ZnRDh1UmY3SkdVbTRhMWdfTmNneFZRQ0pHa3JyUlRScjh6YTZOUVVzN05oNkN4SW91VXNTUTI2aGZoMnlPYlkycS1yeS0tVVhDcWxXUXhvVGc?oc=5"
+   },
+   {
+    "title": "Digital Exercise and Rehabilitation May Improve Cognition During Breast Cancer Chemotherapy",
+    "source": "Bioengineer.org",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcHBNQmNtZ2xYc1JyTDFvelpYeXFZQ2RZZFc0VlIzSW9TV2F6ZEJjaHJhSGp5Sl9aQkV4Z0M1N08tNzdSa3I5WTExOEo3TFRlcWdEeE12RGRDb2NWTFNDcW9DNVB0ekNLaG9CSGk5QVIxaHUxYXF2TUxMR3lBWjM1NkR3dUptT1lEMlRfQmFvN2pfanRTUzZBVDNhczFMaVp2MHY4b0Zwakt5dU5LUnIwSnF2UURWbDg?oc=5"
+   },
+   {
+    "title": "Rex Bionics raises tens of millions of yuan to expand rehab robots globally",
+    "source": "Dealroom",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQazJRb09OYm5hXzdINDJQcGxqcGRETUxQRk1tM3k0dWZUS3dfOE55dzh3NWdwdUlCcTZ6R1lQWjI1ZUFybGZXbTZiWTBhdEpYQXMtUnJwZENiWkZ3cHh4MTc0QTZ4OUc1WnJvQWp1aEhUQXdrTTZ0T0g4NGVMV3gwUHFFREt1bkMzd1BucUVjTERxZEVlblBDbXV2UksxUGh6RHQzLTFWc2J1MTlfM2c?oc=5"
+   }
+  ]
+ },
+ "transcript": true
+}
