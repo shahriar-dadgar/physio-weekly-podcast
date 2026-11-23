@@ -1,0 +1,70 @@
+{
+ "date": "2026-11-23",
+ "title": "Physio Weekly for Sabaa: November 23, 2026",
+ "description": "Welcome to Physio Weekly for Sabaa, your weekly look at the research and technology shaping rehabilitation. I'm your host, and this week we've got a solid run of trials and reviews, then a few technology developments worth watching. Let's get into it. We start at the shoulder. A network meta-analysis in Lasers in Medical Science pooled nineteen randomized trials and just under a thousand patients ",
+ "summary": "Welcome to Physio Weekly for Sabaa, your weekly look at the research and technology shaping rehabilitation. I'm your host, and this week we've got a solid run of trials and reviews, then a few technology developments worth watching. Let's get into it. We start at the shoulder. A network meta-analysis in Lasers in Medical Science pooled nineteen randomized trials and just under a thousand patients to ask whether adding laser therapy to conventional physiotherapy helps in subacromial impingement. On pain, the signal was cautiously positive: both high-intensity and low-level laser reduced pain scores compared with conventional physiotherapy alone, and neither laser beat the other.",
+ "duration": 444,
+ "bytes": 2664144,
+ "stories": {
+  "scientific": [
+   {
+    "title": "Efficacy of laser therapy for subacromial impingement syndrome: a network meta-analysis of randomized controlled trials",
+    "source": "Lasers in Medical Science",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43064839/"
+   },
+   {
+    "title": "Self-guided home-based rehabilitation for upper limb motor recovery in people with stroke: a systematic review and meta-analysis",
+    "source": "Disability and Rehabilitation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43059141/"
+   },
+   {
+    "title": "Acupuncture combined with repetitive transcranial magnetic stimulation vs repetitive transcranial magnetic stimulation alone for recovery of hemiparesis after ischemic stroke: A systematic review and meta-analysis",
+    "source": "Neuroscience",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42702246/"
+   },
+   {
+    "title": "Efficacy of action observation therapy in patients with dementia or cognitive impairment: a systematic review and meta-analysis of randomized trials",
+    "source": "Disability and Rehabilitation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43046686/"
+   },
+   {
+    "title": "Impact of Adding Fatigue-Focused Cognitive Behavior Therapy to Supervised Pilates-Based Core Stability Training on Balance and Walking in Patients with Multiple Sclerosis: A Randomized Controlled Trial",
+    "source": "Clinical Rehabilitation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43061942/"
+   },
+   {
+    "title": "Home-based pulmonary rehabilitation early after hospitalisation in COPD: A randomised controlled trial",
+    "source": "European Respiratory Journal",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43057871/"
+   },
+   {
+    "title": "Effects of Different Early Mobilization Initiation Times on Postoperative Rehabilitation in Patients After Thoracoscopic Lung Cancer Surgery: A Network Meta-Analysis",
+    "source": "Cancer Nursing",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43046324/"
+   },
+   {
+    "title": "Aerobic training after stroke: a systematic review and meta-analysis of walking endurance, gait speed, and balance",
+    "source": "International Journal of Rehabilitation Research",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43059447/"
+   }
+  ],
+  "technology": [
+   {
+    "title": "Soft Wearable Shoulder Robot Matches Physical Therapists in Older Adult Stretching",
+    "source": "Bioengineer.org",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMVRjSDNDOWxOR1FCZGpobnpvclVISG9rSnVqSHktSWNlZDlBVWFneVFBQ21KSk9kWjVqdFlYOWM1ZXlkOUxQUDktY2ZTY2JrWVYtZmltRm5qWlI2Qm9mRWgzSF9QeUJGNHowNkI3R2Vyb05xLVZLemZBVVJURkpJWkdyNGV5djdWNUgzY0huc3BfbFBULXo5eFFCTW9QQ1NCOUNhcmQyRHpaV2c?oc=5"
+   },
+   {
+    "title": "Dynamic Solution Seeks FDA Approval for 'X-Hand' Rehabilitation Robot Hand, Targets North American Market",
+    "source": "아시아경제",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5FVFdKU202TGFtSHFZQ3pzZDk2U3puWnBMQU8xcjU2U1ZBbDZmbHpOc2JpSTBtQzRqc3ktVGxhXzVqWHBLbG5OYWlhcl9iLUpEWmRHSEdSXzVNQkk2VGNrM2pNNEU?oc=5"
+   },
+   {
+    "title": "Virtual Reality Assisted Cycling Shows Feasibility and Safety in Intensive Care",
+    "source": "Bioengineer.org",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVVFyLVRwNGhobDd4WGE2ZnJhMWdmSFdNVzktWTdHUGZQZ0c4VUFvbC1ZXzlTTWkyQ05oSVZydHg3VDB6a1FVUlZENTZSUFBrcUkzVjI2aEJIZFlBbXM5aHlJdUJzeVctUHNNNUVfdVZQTVpINEJLalZmYk1IbDVadjJEMUwwUVpnVVBfcjd3QUNZY2Q2ZlhXX1ZoTWZFS2t3SkpVWk5xUQ?oc=5"
+   }
+  ]
+ },
+ "transcript": true
+}
